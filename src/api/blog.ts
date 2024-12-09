@@ -17,7 +17,6 @@ export async function getBlogs() {
   const assets = res.data.includes.Asset;
 
   const blogs = res.data.items.map((item: any, index: number) => {
-    let paragraph = "";
     return {
       ...item,
       /*
@@ -31,29 +30,21 @@ export async function getBlogs() {
         (itemAsset: any) => itemAsset?.sys.id === item.fields.banner.sys.id
       )?.fields?.file?.url,
       date: formatDate(item?.fields?.createdDate),
-      body: item.fields.body.content[0].content[0].value + "...",
-      // body: Object.values(item.fields.body.content).map(function(content:any, key:number){
-      //   // Object.values
-      // console.log(content.content[0].value)
-      // paragraph+= content.content[0].value
-
-      // if (key==item.fields.body.content.length-1){
-
-      //   return paragraph
-      // }
-
-      // }),
-      //   // body:"okkkkeee"
-      // // body:item.fields.body.content.content.value
+      body: item.fields.body.content[0].content[0].value,
+      tags: item.metadata.tags.map((tag: any) => {
+        return tag.sys.id
+      }),
     };
   });
 
   return blogs;
 }
 
-export async function getBlogDetail(enteriesId: string) {
-  const getBlogDetailEndPoint =
-    "https://cdn.contentful.com/spaces/a5w4nyh99tn9/environments/master/entries/${entriesId}/?{access_token}";
+export async function getBlogDetail(entriesId: string) {
+  const res = await axios.get(
+    `https://cdn.contentful.com/spaces/a5w4nyh99tn9/environments/master/entries/${entriesId}/?access_token=${access_token}&include=1`
+  );
+
   const blogDetail = res.data.fields;
   return blogDetail;
 }

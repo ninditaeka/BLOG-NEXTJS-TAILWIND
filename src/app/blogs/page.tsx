@@ -1,8 +1,7 @@
-
-"use client"
+"use client";
 
 import { getBlogs } from "@/api/blog";
-import ListofCategories from "@/components/ListofCategories";
+import ListofPost from "@/components/ListofPost";
 import NavBar from "@/components/Navbar";
 import { useEffect, useState } from "react";
 
@@ -21,7 +20,7 @@ export default function Categories() {
   return (
     <div>
       <NavBar />
-      <ListofCategories posts={blogs.slice(3, 8)} />
+      <ListofPost posts={blogs.slice(3, 5)} />
     </div>
   );
 }

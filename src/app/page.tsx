@@ -25,9 +25,8 @@ export default function Home() {
     <div>
       <NavBar />
       <Hero />
-      <FeaturePost posts={blogs} />
-      <PopularCategories />
-      <ListofPost />
+      <FeaturePost posts={blogs.slice(0, 3)} />
+      <PopularCategories posts={blogs} />
     </div>
   );
 }
