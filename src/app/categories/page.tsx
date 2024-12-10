@@ -21,7 +21,8 @@ export default function Categories() {
   return (
     <div>
       <NavBar />
-      <ListofCategories posts={blogs.slice(3, 8)} />
+      <ListofCategories posts={blogs} />
+      {/* <ListofCategories posts={blogs.slice(0, 3)} /> */}
     </div>
   );
 }

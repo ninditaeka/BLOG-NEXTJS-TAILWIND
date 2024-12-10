@@ -20,7 +20,8 @@ export default function Categories() {
   return (
     <div>
       <NavBar />
-      <ListofPost posts={blogs.slice(3, 5)} />
+      {/* <ListofPost posts={blogs.slice(0,2)} /> */}
+      <ListofPost posts={blogs} />
     </div>
   );
 }

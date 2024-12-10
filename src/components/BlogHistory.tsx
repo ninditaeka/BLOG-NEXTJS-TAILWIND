@@ -1,13 +1,12 @@
 "use client";
 
-import { Card, Button, Checkbox, Label, TextInput } from "flowbite-react";
+import { Card} from "flowbite-react";
 import Image from "next/image";
 import Link from "next/link";
 import { BsInstagram } from "react-icons/bs";
 import { FaXTwitter } from "react-icons/fa6";
 import { SiLinkedin } from "react-icons/si";
 import { TfiEmail } from "react-icons/tfi";
-
 
 export default function BlogHistory() {
   return (
@@ -19,36 +18,30 @@ export default function BlogHistory() {
           </h1>
 
           <p className="font-normal text-gray-700 dark:text-gray-400 text-justify">
-            Section 1.10.32 of "de Finibus Bonorum et Malorum", written by
-            Cicero in 45 BC "Sed ut perspiciatis unde omnis iste natus error sit
-            voluptatem accusantium doloremque laudantium, totam rem aperiam,
-            eaque ipsa quae ab illo inventore veritatis et quasi architecto
-            beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-            voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-            magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
-            quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-            adipisci velit, sed quia non numquam eius modi tempora incidunt ut
-            labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad
-            minima veniam, quis nostrum exercitationem ullam corporis suscipit
-            laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem
-            vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
-            molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas
-            nulla pariatur?" 1914 translation by H. Rackham "But I must explain
-            to you how all this mistaken idea of denouncing pleasure and
-            praising pain was born and I will give you a complete account of the
-            system, and expound the actual teachings of the great explorer of
-            the truth, the master-builder of human happiness. No one rejects,
-            dislikes, or avoids pleasure itself, because it is pleasure, but
-            because those who do not know how to pursue pleasure rationally
-            encounter consequences that are extremely painful. Nor again is
-            there anyone who loves or pursues or desires to obtain pain of
-            itself, because it is pain, but because occasionally circumstances
-            occur in which toil and pain can procure him some great pleasure. To
-            take a trivial example, which of us ever undertakes laborious
-            physical exercise, except to obtain some advantage from it? But who
-            has any right to find fault with a man who chooses to enjoy a
-            pleasure that has no annoying consequences, or one who avoids a pain
-            that produces no resultant pleasure?"
+            Evergreen content refers to blog posts that remain relevant and
+            valuable over a long period of time, unlike seasonal content that
+            might only be relevant for a short while. Evergreen blog posts are
+            designed to be timeless, providing useful information that readers
+            will find helpful regardless of when they come across it. The
+            mission of an evergreen blog focused on travel would typically be to
+            inspire and guide travelers by sharing valuable tips, destination
+            guides, and personal experiences. The vision might be to become a
+            trusted resource for travelers worldwide, helping them plan their
+            trips more effectively and enjoyably. Travel tips and places to
+            visit could include advice like packing light to make travels
+            easier, staying safe by being aware of surroundings, budgeting
+            wisely by planning expenses and looking for savings, and learning
+            local phrases to improve communication. Highlighting places to visit
+            such as Bali, Indonesia, known for its beautiful beaches and vibrant
+            culture; Kyoto, Japan, famous for its temples, traditional tea
+            houses, and cherry blossoms; Paris, France, the city of love with
+            landmarks like the Eiffel Tower and Louvre Museum; and New Zealand,
+            offering stunning landscapes perfect for adventure activities like
+            hiking and bungee jumping, can provide readers with inspiration and
+            valuable insights for their travel plans. By focusing on such
+            content, an evergreen travel blog can provide readers with timeless
+            advice and inspiration, ensuring that the information remains useful
+            and relevant for years to come.
           </p>
         </Card>
 
@@ -100,57 +93,55 @@ export default function BlogHistory() {
           </h1>
 
           <p className="font-normal text-gray-700 dark:text-gray-400 text-justify">
-            Our mission is to inspire and empower our
-            readers to explore the world with curiosity and openness. We aim to
-            provide valuable insights, tips, and stories that enhance their
-            travel experiences while promoting responsible and sustainable
-            travel practices. We envision a world where travel brings people
-            closer together, fostering a greater understanding and appreciation
-            of diverse cultures and environments. Our goal is to be a trusted
-            source of travel inspiration and information, helping our readers
-            make the most of their journeys. We uphold the values of
-            authenticity, sharing genuine experiences and honest advice;
-            sustainability, promoting eco-friendly travel practices and
-            minimizing our environmental impact; inclusivity, celebrating
-            diverse cultures, backgrounds, and perspectives; adventure,
-            encouraging exploration and a spirit of adventure; and community,
-            building a supportive community of travel enthusiasts. Our travel
-            blog is dedicated to making travel accessible, enjoyable, and
-            meaningful for everyone. Whether you're a seasoned traveler or
-            planning your first trip, we're here to guide and inspire you every
-            step of the way. 🌍✈️✨ Happy travels! 😊
+            Our mission is to inspire and empower our readers to explore the
+            world with curiosity and openness. We aim to provide valuable
+            insights, tips, and stories that enhance their travel experiences
+            while promoting responsible and sustainable travel practices. We
+            envision a world where travel brings people closer together,
+            fostering a greater understanding and appreciation of diverse
+            cultures and environments. Our goal is to be a trusted source of
+            travel inspiration and information, helping our readers make the
+            most of their journeys. We uphold the values of authenticity,
+            sharing genuine experiences and honest advice; sustainability,
+            promoting eco-friendly travel practices and minimizing our
+            environmental impact; inclusivity, celebrating diverse cultures,
+            backgrounds, and perspectives; adventure, encouraging exploration
+            and a spirit of adventure; and community, building a supportive
+            community of travel enthusiasts. Our travel blog is dedicated to
+            making travel accessible, enjoyable, and meaningful for everyone.
+            Whether you are a seasoned traveler or planning your first trip,
+            we are here to guide and inspire you every step of the way. 🌍✈️✨
+            Happy travels! 😊
           </p>
         </Card>
 
         <Card className="mt-10">
           <h1 className="text-2xl font-bold tracking-tight text-center text-gray-900 ">
-                Reach me in :
+            Reach me in :
           </h1>
 
-<div className="flex flex-row mt-3 gap-4 justify-center">
-              <Link href="#">
-                <BsInstagram size={"30px"}/>
-              </Link>
-              <Link href="#">
-              <FaXTwitter size={"30px"}/>
-              </Link>
-              <Link href="#">
+          <div className="flex flex-row mt-3 gap-4 justify-center">
+            <Link href="#">
+              <BsInstagram size={"30px"} />
+            </Link>
+            <Link href="#">
+              <FaXTwitter size={"30px"} />
+            </Link>
+            <Link href="#">
               <SiLinkedin size={"30px"} />
-              </Link>
-              <Link href="#">
+            </Link>
+            <Link href="#">
               <TfiEmail size={"30px"} />
-              </Link>
-              </div>
-          
+            </Link>
+          </div>
         </Card>
       </div>
     </div>
   );
 }
 
-
-
-{/* <form className="flex flex-col gap-1 w-1/2">
+{
+  /* <form className="flex flex-col gap-1 w-1/2">
 <div className="mb-2 block">
   <Label htmlFor="name" value="Name" />
 </div>
@@ -173,4 +164,5 @@ export default function BlogHistory() {
 </div>
 
 <Button type="submit">Submit</Button>
-</form> */}
+</form> */
+}

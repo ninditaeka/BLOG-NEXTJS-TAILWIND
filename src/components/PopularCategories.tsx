@@ -1,7 +1,6 @@
 "use client";
 
 import { Card, ListGroup } from "flowbite-react";
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -19,13 +18,25 @@ export default function PopularCategories({ posts }: any) {
       id: "nature",
       label: "Nature",
     },
+    {
+      id: "wonder",
+      label: "Wonder",
+    },
+    {
+      id: "tips",
+      label: "Tips",
+    },
   ];
 
-  const [selectedCatagories, setSelectedCatagories] = useState<any>({});
+  const [selectedPopularCatagories, setSelectedPopularCatagories] =
+    useState<any>({});
 
   const filterPost = posts.filter((post: any) => {
-    if (!selectedCatagories?.id) return true
-    return selectedCatagories?.id && post.tags.includes(selectedCatagories?.id);
+    if (!selectedPopularCatagories?.id) return true;
+    return (
+      selectedPopularCatagories?.id &&
+      post.tags.includes(selectedPopularCatagories?.id)
+    );
   });
 
   return (
@@ -42,7 +53,7 @@ export default function PopularCategories({ posts }: any) {
                   <ListGroup.Item
                     key={listThema?.id}
                     onClick={() => {
-                      setSelectedCatagories(listThema);
+                      setSelectedPopularCatagories(listThema);
                       console.log(listThema);
                     }}
                   >
@@ -51,9 +62,10 @@ export default function PopularCategories({ posts }: any) {
                 ))}
             </ListGroup>
           </div>
+
           <div className="flex flex-col md:ml-32 mt-4 ">
             <p className="hover:bg-gray-100 hover:ps-2 md:text-xl text-xl font-bold tracking-tight text-gray-900">
-              {selectedCatagories?.label}
+              {selectedPopularCatagories?.label}
             </p>
 
             <div className="flex  flex-col justify-between">

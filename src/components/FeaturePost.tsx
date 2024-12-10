@@ -1,7 +1,6 @@
 "use client";
 
 import { Card } from "flowbite-react";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function FeaturePost({ posts }: any) {
@@ -32,20 +31,19 @@ export default function FeaturePost({ posts }: any) {
                   {post.title}
                 </h5>
                 <div className="flex flex-col">
-                <p className="font-normal line-clamp-3 text-gray-700 text-justify dark:text-gray-400">
-                  {post.body}
-                </p>
-                <div className="flex flex-row justify-between items-center">
-                  <h1 className=" text-gray-500 text-sm ">{post.date}</h1>
-                  <Link
-                    href={"/blogs/"+post?.id}
-                    className=" px-4 py-2 text-center  text-sm font-medium text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:hover:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
-                  >
-                    Read More
-                  </Link>
+                  <p className="font-normal line-clamp-3 text-gray-700 text-justify dark:text-gray-400">
+                    {post.body}
+                  </p>
+                  <div className="flex flex-row justify-between items-center">
+                    <h1 className=" text-gray-500 text-sm ">{post.date}</h1>
+                    <Link
+                      href={"/blogs/" + post?.id}
+                      className=" px-4 py-2 text-center  text-sm font-medium text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:hover:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+                    >
+                      Read More
+                    </Link>
+                  </div>
                 </div>
-                </div>
-
               </div>
             </Card>
           ))}

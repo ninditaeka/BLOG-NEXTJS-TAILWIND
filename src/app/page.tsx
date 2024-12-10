@@ -4,7 +4,6 @@ import NavBar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import FeaturePost from "@/components/FeaturePost";
 import PopularCategories from "@/components/PopularCategories";
-import ListofPost from "@/components/ListofPost";
 import { getBlogs } from "./../api/blog";
 import { useEffect, useState } from "react";
 
