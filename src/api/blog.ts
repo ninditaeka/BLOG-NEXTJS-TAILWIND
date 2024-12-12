@@ -12,7 +12,7 @@ const formatDate = (dateString: string) => {
 export async function getBlogs() {
   const baseUrl = "https://cdn.contentful.com";
   const spaceID = "a5w4nyh99tn9";
-  const getBlogsEndpoint = `${baseUrl}/spaces/${spaceID}/environments/master/entries?access_token=${access_token}&include=10`;
+  const getBlogsEndpoint = `${baseUrl}/spaces/${spaceID}/environments/master/entries?access_token=${access_token}&include=1`;
   const res = await axios.get(getBlogsEndpoint);
   const assets = res.data.includes.Asset;
 
@@ -22,9 +22,11 @@ export async function getBlogs() {
 
       id: item?.sys?.id,
       title: item?.fields?.title,
-      image_url: (Object.values(assets).find(
-        (itemAsset: any) => itemAsset?.sys.id === item.fields.banner.sys.id
-      ) as any).fields?.file?.url,
+      image_url: (
+        Object.values(assets).find(
+          (itemAsset: any) => itemAsset?.sys.id === item.fields.banner.sys.id
+        ) as any
+      ).fields?.file?.url,
       date: formatDate(item?.fields?.createdDate),
       body: item.fields.body.content[0].content[0].value,
       tags: item.metadata.tags.map((tag: any) => {
